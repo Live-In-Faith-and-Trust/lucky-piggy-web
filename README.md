@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 당첨돼지 랜딩페이지
 
-## Getting Started
+당첨돼지 앱의 구글 플레이스토어 다운로드 유도 랜딩페이지.
 
-First, run the development server:
+## 기술 스택
+
+- Next.js 16 (App Router)
+- TypeScript
+- TailwindCSS
+- Vercel 배포
+
+## 로컬 실행
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 테스트
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm test
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 교체 포인트
 
-## Learn More
+`src/lib/constants.ts`에서 관리:
 
-To learn more about Next.js, take a look at the following resources:
+- `PLAY_STORE_URL` — 구글 플레이스토어 앱 URL
+- `PRE_SIGNUP_COUNT` — 사전 신청자 수 (정적 값 또는 API 연동)
+- `PRE_SIGNUP_GOAL` — 목표 인원
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 미결 사항
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] 구글 플레이스토어 앱 URL 확정 → `constants.ts`의 `PLAY_STORE_URL` 교체
+- [ ] 사전 신청자 수 API 연동 (현재 정적 값)
+- [ ] 앱 스크린샷 / 캐릭터 이미지 에셋 추가
+- [ ] 도메인 확정 후 Vercel 커스텀 도메인 설정
+- [ ] 개인정보처리방침 · 이용약관 내용 작성
 
-## Deploy on Vercel
+## 배포
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel에 레포를 연결하면 자동 배포됩니다.
