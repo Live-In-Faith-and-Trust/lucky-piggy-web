@@ -1,36 +1,56 @@
 const missions = [
-  {
-    icon: '🚶',
-    title: '매일 걷기',
-    description: '하루 1,000보~10,000보, 걸음 수에 따라 응모권 지급',
-  },
-  {
-    icon: '📱',
-    title: '광고 보기',
-    description: '짧은 광고 영상 시청 시 응모권 즉시 지급',
-  },
-  {
-    icon: '👫',
-    title: '친구 초대',
-    description: '친구가 가입하면 나도, 친구도 응모권 지급',
-  },
+  { icon: '🚶', name: '만보 달성', reward: '복권 3장', frequency: '매일' },
+  { icon: '📺', name: '광고 시청', reward: '복권 1장', frequency: '하루 5회' },
+  { icon: '👥', name: '친구 초대', reward: '복권 10장', frequency: '무제한' },
+  { icon: '🔔', name: '출석 체크', reward: '복권 1장', frequency: '매일' },
 ];
 
 export default function MissionList() {
   return (
-    <section className="px-6 py-20 bg-white text-center">
+    <section className="entrance" style={{ background: '#FFFFFF', padding: '48px 24px' }}>
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-12">
-          응모권 받는 방법
+        {/* Section label */}
+        <p
+          className="text-center"
+          style={{ fontSize: 14, fontWeight: 500, color: '#FE6A86', letterSpacing: '0.08em', textTransform: 'uppercase' }}
+        >
+          미션 &amp; 보상
+        </p>
+
+        {/* Headline */}
+        <h2 className="text-center mt-2" style={{ fontSize: 24, fontWeight: 600, color: '#1A1A1A' }}>
+          이렇게 복권을 모아요
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-          {missions.map((mission) => (
-            <div key={mission.title} className="flex flex-col items-center gap-3">
-              <span className="text-4xl">{mission.icon}</span>
-              <h3 className="font-semibold text-gray-900">{mission.title}</h3>
-              <p className="text-sm text-gray-500">{mission.description}</p>
+
+        {/* Mission table card */}
+        <div className="card mt-6 overflow-hidden">
+          {missions.map((m, i) => (
+            <div
+              key={m.name}
+              className="flex items-center"
+              style={{
+                padding: '16px 24px',
+                borderBottom: i < missions.length - 1 ? '1px solid #F5F5F5' : 'none',
+              }}
+            >
+              <div style={{ fontSize: 32, width: 40, flexShrink: 0 }}>{m.icon}</div>
+              <div className="flex-1" style={{ marginLeft: 12 }}>
+                <p style={{ fontSize: 16, fontWeight: 400, color: '#1A1A1A' }}>{m.name}</p>
+              </div>
+              <div className="text-right">
+                <p style={{ fontSize: 16, fontWeight: 600, color: '#FE6A86' }}>{m.reward}</p>
+                <p style={{ fontSize: 12, fontWeight: 500, color: '#BDBDBF' }}>{m.frequency}</p>
+              </div>
             </div>
           ))}
+        </div>
+
+        {/* Total potential chip */}
+        <div className="flex flex-col items-center mt-6">
+          <p style={{ fontSize: 14, fontWeight: 400, color: '#767676' }}>하루 최대</p>
+          <div style={{ background: '#1A1A1A', borderRadius: 12, padding: '12px 24px', marginTop: 8 }}>
+            <p style={{ fontSize: 24, fontWeight: 600, color: '#FFDD13' }}>복권 20장 획득 가능</p>
+          </div>
         </div>
       </div>
     </section>

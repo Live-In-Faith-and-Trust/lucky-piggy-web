@@ -1,8 +1,8 @@
 export const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=PLACEHOLDER';
 
-export const PRE_SIGNUP_COUNT = 1234;
-export const PRE_SIGNUP_GOAL = 5000;
+export const PRE_SIGNUP_COUNT = 12847;
+export const PRE_SIGNUP_GOAL = 50000;
 
 export const APP_NAME = '당첨돼지';
 export const SITE_TITLE = '당첨돼지 — 매일 걷고 1,000만 원 받아가세요';

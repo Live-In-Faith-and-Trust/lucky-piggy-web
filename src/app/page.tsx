@@ -1,19 +1,25 @@
 import Hero from '@/components/Hero';
+import PreSignup from '@/components/PreSignup';
 import ServiceIntro from '@/components/ServiceIntro';
 import MissionList from '@/components/MissionList';
 import PrizeTable from '@/components/PrizeTable';
-import PreSignup from '@/components/PreSignup';
 import Footer from '@/components/Footer';
+import StickyHeader from '@/components/StickyHeader';
+import AnimationObserver from '@/components/AnimationObserver';
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <ServiceIntro />
-      <MissionList />
-      <PrizeTable />
-      <PreSignup />
-      <Footer />
-    </main>
+    <>
+      <StickyHeader />
+      <AnimationObserver />
+      <main>
+        <Hero />
+        <PreSignup />
+        <ServiceIntro />
+        <MissionList />
+        <PrizeTable />
+        <Footer />
+      </main>
+    </>
   );
 }
