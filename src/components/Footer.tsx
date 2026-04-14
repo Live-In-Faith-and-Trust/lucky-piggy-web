@@ -1,62 +1,47 @@
-import Image from 'next/image';
-
-const links = [
-  { label: '개인정보처리방침', href: '/privacy' },
-  { label: '이용약관', href: '/terms' },
-  { label: '고객센터', href: '#' },
+const socialLinks = [
+  { label: 'Instagram', href: '#' },
+  { label: 'LinkedIn', href: '#' },
 ];
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#1A1A1A', padding: '48px 24px 32px' }}>
-      <div className="max-w-2xl mx-auto">
-        {/* Final CTA block */}
-        <div className="text-center" style={{ marginBottom: 48 }}>
-          <div className="flex justify-center">
-            <Image src="/images/pig/pig-welcom.png" alt="환영하는 돼지" width={120} height={120} />
+    <footer style={{ background: '#FAFAFA', padding: '48px 32px 32px' }}>
+      <div className="max-w-5xl mx-auto">
+        {/* Top row: brand left, follow us right */}
+        <div className="flex justify-between items-start">
+          <span style={{ fontSize: 20, fontWeight: 800, color: '#1A1A1A', letterSpacing: '-0.02em' }}>
+            withly
+          </span>
+
+          <div>
+            <p style={{ fontSize: 13, fontWeight: 600, color: '#1A1A1A', marginBottom: 12 }}>Follow Us</p>
+            <div className="flex flex-col gap-2">
+              {socialLinks.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  style={{ fontSize: 14, color: '#444444', textDecoration: 'none' }}
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
           </div>
-          <h2 style={{ fontSize: 24, fontWeight: 600, color: '#FFFFFF', lineHeight: 1.4, marginTop: 16 }}>
-            지금 사전신청하고<br />첫 복권 10장 받으세요
-          </h2>
-          <div className="flex justify-center mt-6">
-            <a
-              href="#pre-signup"
-              className="btn-primary"
-              style={{ width: '100%', maxWidth: 360 }}
-            >
-              무료로 사전신청
-            </a>
-          </div>
-          <p style={{ fontSize: 12, fontWeight: 500, color: '#767676', marginTop: 8 }}>
-            앱 출시 시 카카오톡으로 알림 발송
-          </p>
         </div>
 
         {/* Divider */}
-        <div style={{ height: 1, background: '#333333' }} />
+        <div style={{ height: 1, background: '#E0E0E0', margin: '40px 0 20px' }} />
 
-        {/* Links */}
-        <div className="flex justify-center gap-6 mt-6">
-          {links.map((link) => (
-            <a
-              key={link.label}
-              href={link.href}
-              style={{ fontSize: 12, fontWeight: 500, color: '#767676', textDecoration: 'none' }}
-            >
-              {link.label}
-            </a>
-          ))}
+        {/* Bottom row: copyright left, legal links right */}
+        <div className="flex justify-between items-center flex-wrap gap-3">
+          <p style={{ fontSize: 13, color: '#767676' }}>
+            © 2026 withly. All rights reserved.
+          </p>
+          <div className="flex gap-6">
+            <a href="/privacy" style={{ fontSize: 13, color: '#767676', textDecoration: 'none' }}>개인정보처리방침</a>
+            <a href="/terms"   style={{ fontSize: 13, color: '#767676', textDecoration: 'none' }}>이용약관</a>
+          </div>
         </div>
-
-        {/* Company info */}
-        <p className="text-center mt-2" style={{ fontSize: 14, fontWeight: 400, color: '#767676' }}>
-          (주)럭키피기 | 사업자등록번호: 000-00-00000 | 통신판매업신고: 제0000-서울-0000호
-        </p>
-
-        {/* Copyright */}
-        <p className="text-center mt-2" style={{ fontSize: 12, fontWeight: 500, color: '#444444' }}>
-          © 2025 Lucky Piggy. All rights reserved.
-        </p>
       </div>
     </footer>
   );

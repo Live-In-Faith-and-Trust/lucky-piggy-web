@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import Footer from '@/components/Footer';
 import StickyHeader from '@/components/StickyHeader';
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <main>
         <Hero />
       </main>
+      <Footer />
     </>
   );
 }
