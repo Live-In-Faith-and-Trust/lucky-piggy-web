@@ -23,9 +23,9 @@ export default function Hero() {
               <div className="animate-fade-in-up-d1 flex justify-center md:justify-start mb-4">
                 <span
                   className="pill"
-                  style={{ background: '#FE6A86', color: '#FFFFFF', fontSize: 12, fontWeight: 500, padding: '6px 16px' }}
+                  style={{ background: '#FE6A86', color: '#FFFFFF', fontSize: 16, fontWeight: 800, padding: '8px 20px' }}
                 >
-                  매주 토요일 MBC 로또 생방송
+                  로또 응모 만보기
                 </span>
               </div>
 
@@ -34,7 +34,7 @@ export default function Hero() {
                 className="animate-fade-in-up-d2 text-center md:text-left"
                 style={{ fontSize: 'clamp(22px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
               >
-                가입만 해도 응모권 100장<br />1,000만원 당첨에 도전하세요
+                매주 실제 로또 번호로<br />1,000만원 추첨
               </h1>
 
               {/* Sub-headline */}
@@ -42,7 +42,7 @@ export default function Hero() {
                 className="animate-fade-in-up-d3 text-center md:text-left mt-4"
                 style={{ fontSize: 'clamp(17px, 2vw, 22px)', fontWeight: 400, color: '#444444', maxWidth: 420, wordBreak: 'keep-all' }}
               >
-                실제 로또 동일번호로 매주 토요일 추첨
+                가입만해도 응모권 100장을 드려요!
               </p>
 
               {/* CTA */}
