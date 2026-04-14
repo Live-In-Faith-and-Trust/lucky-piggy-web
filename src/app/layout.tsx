@@ -5,6 +5,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/lib/constants";
 export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
+  icons: {
+    icon: '/images/app-icon.png',
+    apple: '/images/app-icon.png',
+  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
