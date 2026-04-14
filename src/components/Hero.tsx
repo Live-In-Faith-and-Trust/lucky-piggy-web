@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { PLAY_STORE_URL } from '@/lib/constants';
 
 export default function Hero() {
   return (
@@ -47,13 +48,15 @@ export default function Hero() {
               {/* CTA */}
               <div className="animate-fade-in-up-d4 flex flex-col items-center md:items-start gap-2 mt-8">
                 <a
-                  href="#pre-signup"
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-dark animate-gold-pulse"
                   style={{ width: '100%', maxWidth: 320, boxShadow: '0 4px 16px rgba(0,0,0,0.25)' }}
                 >
-                  지금 사전신청하기
+                  구글 플레이에서 무료 다운로드
                 </a>
-                <p style={{ fontSize: 12, fontWeight: 500, color: '#767676' }}>무료 · 앱 출시 알림만 받아요</p>
+                <p style={{ fontSize: 12, fontWeight: 500, color: '#767676' }}>무료 · Android</p>
               </div>
             </div>
 
