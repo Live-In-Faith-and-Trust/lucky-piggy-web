@@ -32,9 +32,9 @@ export default function Hero() {
               {/* Headline */}
               <h1
                 className="animate-fade-in-up-d2 text-center md:text-left"
-                style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 800, lineHeight: 1.2, color: '#1A1A1A' }}
+                style={{ fontSize: 'clamp(22px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
               >
-                매주 1,000만원<br />걷기만해도 응모
+                가입만 해도 응모권 100장<br />1,000만원 당첨에 도전하세요
               </h1>
 
               {/* Sub-headline */}
