@@ -115,6 +115,11 @@
   50%       { box-shadow: 0 4px 24px rgba(255,221,19,0.50), 0 4px 16px rgba(0,0,0,0.2); }
 }
 
+/* ─── Speech bubble responsive position ──────────────────────── */
+@media (min-width: 768px) {
+  .speech-bubble { top: 78px !important; }
+}
+
 /* ─── Hero entrance animations ───────────────────────────────── */
 .animate-fade-in-up   { animation: fadeInUp 0.5s ease-out both; }
 .animate-fade-in-up-d1 { animation: fadeInUp 0.5s 0.15s ease-out both; }

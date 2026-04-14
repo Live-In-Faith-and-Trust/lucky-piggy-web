@@ -18,62 +18,99 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-center md:gap-12">
             {/* Text content */}
-            <div className="flex-1 order-2 md:order-1">
+            <div className="flex-1 order-1">
               {/* Eyebrow tag */}
               <div className="animate-fade-in-up-d1 flex justify-center md:justify-start mb-4">
                 <span
                   className="pill"
-                  style={{ background: '#FE6A86', color: '#FFFFFF', fontSize: 16, fontWeight: 800, padding: '8px 20px' }}
+                  style={{ background: '#FE6A86', color: '#FFFFFF', fontSize: 20, fontWeight: 800, padding: '10px 22px' }}
                 >
-                  로또 응모 만보기
+                  로또 응모 앱테크
                 </span>
               </div>
 
               {/* Headline */}
               <h1
                 className="animate-fade-in-up-d2 text-center md:text-left"
-                style={{ fontSize: 'clamp(22px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
+                style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
               >
                 매주 실제 로또 번호로<br />1,000만원 추첨
               </h1>
 
-              {/* Sub-headline */}
-              <p
-                className="animate-fade-in-up-d3 text-center md:text-left mt-4"
-                style={{ fontSize: 'clamp(17px, 2vw, 22px)', fontWeight: 400, color: '#444444', maxWidth: 420, wordBreak: 'keep-all' }}
-              >
-                가입만해도 응모권 100장을 드려요!
-              </p>
-
-              {/* CTA */}
-              <div className="animate-fade-in-up-d4 flex flex-col items-center md:items-start gap-2 mt-8">
+              {/* CTA — 데스크톱 전용 */}
+              <div className="animate-fade-in-up-d4 hidden md:flex flex-col items-start gap-2 mt-8">
                 <a
                   href={PLAY_STORE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-dark animate-gold-pulse"
-                  style={{ width: '100%', maxWidth: 320, boxShadow: '0 4px 16px rgba(0,0,0,0.25)' }}
+                  style={{ width: '100%', maxWidth: 320, boxShadow: '0 4px 16px rgba(0,0,0,0.25)', fontSize: 18 }}
                 >
-                  구글 플레이에서 무료 다운로드
+                  지금 바로 다운로드
                 </a>
               </div>
             </div>
 
             {/* Pig hero asset */}
-            <div className="animate-fade-in-up flex justify-center order-1 md:order-2 mb-6 md:mb-0 md:w-80 lg:w-96">
+            <div className="animate-fade-in-up flex justify-center order-2 mt-8 md:mt-0 mb-0 md:w-80 lg:w-96 relative">
+              {/* Speech bubble — 모바일: top 28, 데스크톱: top 58 */}
+              <div
+                className="speech-bubble"
+                style={{
+                  position: 'absolute',
+                  top: 48,
+                  right: 0,
+                  background: '#FFFFFF',
+                  borderRadius: 16,
+                  padding: '10px 16px',
+                  fontSize: 21,
+                  fontWeight: 700,
+                  color: '#1A1A1A',
+                  whiteSpace: 'nowrap',
+                  boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+                  zIndex: 2,
+                }}
+              >
+                가입만해도 응모권 100장을 드려요!
+                {/* Tail */}
+                <div style={{
+                  position: 'absolute',
+                  bottom: -10,
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  width: 0,
+                  height: 0,
+                  borderLeft: '10px solid transparent',
+                  borderRight: '10px solid transparent',
+                  borderTop: '10px solid #FFFFFF',
+                }} />
+              </div>
               <Image
                 src="/images/pig/pig-money.png"
                 alt="돈 든 돼지"
-                width={320}
-                height={320}
-                className="animate-float"
+                width={384}
+                height={384}
+                className="w-4/5 md:w-full h-auto"
                 style={{ filter: 'drop-shadow(0 16px 48px rgba(0,0,0,0.18))' }}
               />
             </div>
           </div>
+
+          {/* CTA — 모바일 전용 (이미지 아래) */}
+          <div className="animate-fade-in-up-d4 flex md:hidden order-3 justify-center w-full" style={{ marginTop: -50, position: 'relative', zIndex: 10 }}>
+            <a
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-dark animate-gold-pulse"
+              style={{ width: '100%', maxWidth: 320, boxShadow: '0 4px 16px rgba(0,0,0,0.25)', fontSize: 18 }}
+            >
+              지금 바로 다운로드
+            </a>
+          </div>
         </div>
 
-        <div style={{ height: 40 }} />
+        <div className="h-2 md:h-10" />
       </div>
     </section>
   );
