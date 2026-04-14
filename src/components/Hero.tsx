@@ -76,37 +76,6 @@ export default function Hero() {
 
         <div style={{ height: 40 }} />
       </div>
-
-      {/* Social proof strip — white card overlapping gold zone */}
-      <div
-        style={{
-          background: '#FFFFFF',
-          borderRadius: '24px 24px 0 0',
-          marginTop: -24,
-          position: 'relative',
-          zIndex: 1,
-          padding: '24px 32px',
-        }}
-      >
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-3 max-w-lg mx-auto md:max-w-none md:flex md:justify-center md:gap-16">
-            {[
-              { value: '1,000만원', label: '주간 상금' },
-              { value: '매주 토요일', label: '추첨' },
-              { value: 'MBC 로또 6/45', label: '연동 추첨' },
-            ].map((stat, i) => (
-              <div
-                key={i}
-                className="text-center py-2"
-                style={i > 0 ? { borderLeft: '1px solid #E0E0E0' } : {}}
-              >
-                <div style={{ fontSize: 'clamp(16px, 2vw, 20px)', fontWeight: 600, color: '#1A1A1A' }}>{stat.value}</div>
-                <div style={{ fontSize: 12, fontWeight: 500, color: '#767676' }}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 }
