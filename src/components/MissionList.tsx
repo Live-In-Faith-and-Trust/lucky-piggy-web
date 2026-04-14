@@ -1,8 +1,8 @@
 const missions = [
-  { icon: '🚶', name: '만보 달성', reward: '복권 3장', frequency: '매일' },
-  { icon: '📺', name: '광고 시청', reward: '복권 1장', frequency: '하루 5회' },
-  { icon: '👥', name: '친구 초대', reward: '복권 10장', frequency: '무제한' },
-  { icon: '🔔', name: '출석 체크', reward: '복권 1장', frequency: '매일' },
+  { icon: '🚶', name: '만보 달성', reward: '응모권 3장', frequency: '매일' },
+  { icon: '📺', name: '광고 시청', reward: '응모권 1장', frequency: '하루 5회' },
+  { icon: '👥', name: '친구 초대', reward: '응모권 10장', frequency: '무제한' },
+  { icon: '🔔', name: '출석 체크', reward: '응모권 1장', frequency: '매일' },
 ];
 
 export default function MissionList() {
@@ -19,7 +19,7 @@ export default function MissionList() {
 
         {/* Headline */}
         <h2 className="text-center mt-2" style={{ fontSize: 24, fontWeight: 600, color: '#1A1A1A' }}>
-          이렇게 복권을 모아요
+          이렇게 응모권을 모아요
         </h2>
 
         {/* Mission table card */}
@@ -49,7 +49,7 @@ export default function MissionList() {
         <div className="flex flex-col items-center mt-6">
           <p style={{ fontSize: 14, fontWeight: 400, color: '#767676' }}>하루 최대</p>
           <div style={{ background: '#1A1A1A', borderRadius: 12, padding: '12px 24px', marginTop: 8 }}>
-            <p style={{ fontSize: 24, fontWeight: 600, color: '#FFDD13' }}>복권 20장 획득 가능</p>
+            <p style={{ fontSize: 24, fontWeight: 600, color: '#FFDD13' }}>응모권 20장 획득 가능</p>
           </div>
         </div>
       </div>

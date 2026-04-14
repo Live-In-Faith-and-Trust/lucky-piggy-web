@@ -9,7 +9,7 @@ export default function PreSignup() {
 
         {/* Headline */}
         <h2 className="mt-2" style={{ fontSize: 'clamp(24px, 3vw, 36px)', fontWeight: 700, color: '#1A1A1A', lineHeight: 1.3 }}>
-          출시 전 미리 신청하면<br />추가 복권 10장 증정
+          출시 전 미리 신청하면<br />추가 응모권 10장 증정
         </h2>
 
         <p className="mt-3" style={{ fontSize: 16, fontWeight: 400, color: '#767676' }}>

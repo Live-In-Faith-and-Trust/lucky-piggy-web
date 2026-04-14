@@ -5,24 +5,24 @@ const steps = [
     number: '01',
     pig: '/images/pig/pig-walk.png',
     title: '하루 만보 걸으면',
-    body: '걸음수에 따라 복권 티켓이 자동 적립돼요. 만보 달성 시 최대 3장.',
-    tag: '📍 만보 = 복권 3장',
+    body: '걸음수에 따라 응모권 티켓이 자동 적립돼요. 만보 달성 시 최대 3장.',
+    tag: '📍 만보 = 응모권 3장',
     tagStyle: { background: '#F5F5F5', color: '#444444' },
   },
   {
     number: '02',
     pig: '/images/pig/pig-cinema.png',
     title: '광고 보고 추가 획득',
-    body: '하루 최대 5회 광고 시청으로 복권 추가 적립.',
-    tag: '📺 광고 1회 = 복권 1장',
+    body: '하루 최대 5회 광고 시청으로 응모권 추가 적립.',
+    tag: '📺 광고 1회 = 응모권 1장',
     tagStyle: { background: '#F5F5F5', color: '#444444' },
   },
   {
     number: '03',
     pig: '/images/pig/pig-invite.png',
     title: '친구 초대하면 보너스',
-    body: '친구가 앱을 설치하면 양쪽 모두 복권 10장 지급.',
-    tag: '👥 친구 1명 = 복권 10장',
+    body: '친구가 앱을 설치하면 양쪽 모두 응모권 10장 지급.',
+    tag: '👥 친구 1명 = 응모권 10장',
     tagStyle: { background: '#F5F5F5', color: '#444444' },
   },
   {
@@ -49,7 +49,7 @@ export default function ServiceIntro() {
 
         {/* Headline */}
         <h2 className="text-center mt-2" style={{ fontSize: 32, fontWeight: 700, color: '#1A1A1A', lineHeight: 1.3 }}>
-          걷기만 해도<br />복권이 생겨요
+          걷기만 해도<br />응모권이 생겨요
         </h2>
 
         {/* Step cards */}

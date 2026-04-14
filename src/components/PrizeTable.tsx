@@ -45,7 +45,7 @@ export default function PrizeTable() {
 
         {/* Sub */}
         <p className="text-center mt-3" style={{ fontSize: 16, fontWeight: 400, color: '#BDBDBF' }}>
-          복권 1장 = 추첨 1회 참가. 복권이 많을수록 당첨 확률 UP.
+          응모권 1장 = 추첨 1회 참가. 응모권이 많을수록 당첨 확률 UP.
         </p>
 
         {/* Prize cards — responsive grid */}
@@ -103,7 +103,7 @@ export default function PrizeTable() {
           {/* 보너스 */}
           <div style={{ background: '#F5F5F5', borderRadius: 20, padding: '24px' }}>
             <div style={{ fontSize: 18, fontWeight: 600, color: '#444444' }}>🎁 보너스</div>
-            <div style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8 }}>추가 복권 10장</div>
+            <div style={{ fontSize: 'clamp(20px, 2.5vw, 28px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8 }}>추가 응모권 10장</div>
             <div style={{ fontSize: 14, fontWeight: 400, color: '#767676', marginTop: 4 }}>사전신청자 전원</div>
           </div>
         </div>
