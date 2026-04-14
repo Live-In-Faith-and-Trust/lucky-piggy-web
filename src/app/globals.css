@@ -1,3 +1,221 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* ─── Local Fonts ─────────────────────────────────────────── */
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Regular.otf') format('opentype');
+  font-weight: 400; font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Medium.otf') format('opentype');
+  font-weight: 500; font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-SemiBold.otf') format('opentype');
+  font-weight: 600; font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-Bold.otf') format('opentype');
+  font-weight: 700; font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('/fonts/Pretendard-ExtraBold.otf') format('opentype');
+  font-weight: 800; font-display: swap;
+}
+
+/* ─── Design Tokens ───────────────────────────────────────── */
+@theme {
+  /* Brand */
+  --color-gold:        #FFDD13;
+  --color-gold-dark:   #D4B800;
+  --color-gold-light:  #FFF176;
+  --color-gold-royal:  #FEE255;
+  --color-pink:        #FE6A86;
+  --color-pink-dark:   #D44E6A;
+  --color-cotton:      #FD969A;
+  --color-frost:       #FFDCE0;
+
+  /* Neutrals */
+  --color-n900: #1A1A1A;
+  --color-n800: #2E2E2E;
+  --color-n700: #444444;
+  --color-n600: #5C5C5C;
+  --color-n500: #767676;
+  --color-n400: #9E9E9E;
+  --color-n300: #BDBDBF;
+  --color-n200: #E0E0E0;
+  --color-n100: #F5F5F5;
+  --color-n50:  #FAFAFA;
+
+  /* Semantic */
+  --color-background: #E5E5E5;
+  --color-surface:    #FFFFFF;
+  --color-card:       #FFFFFF;
+  --color-card-foreground: #1A1A1A;
+  --color-foreground: #1A1A1A;
+  --color-primary:    #FFDD13;
+  --color-primary-foreground: #1A1A1A;
+  --color-secondary:  #FE6A86;
+  --color-secondary-foreground: #FFFFFF;
+  --color-muted:      #F5F5F5;
+  --color-muted-foreground: #767676;
+  --color-border:     #E0E0E0;
+  --color-ring:       #FFDD13;
+  --color-destructive: #EF4444;
+
+  /* Shadows (as CSS vars, used in inline styles) */
+  --shadow-card-sm: 0 2px 12px rgba(0,0,0,0.06);
+  --shadow-card-md: 0 4px 24px rgba(0,0,0,0.10);
+  --shadow-card-lg: 0 8px 40px rgba(0,0,0,0.15);
+  --shadow-gold:    0 4px 24px rgba(255,221,19,0.40);
+}
+
+/* ─── Base ────────────────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', sans-serif;
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* ─── Animations ──────────────────────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: var(--progress-width, 0%); }
+}
+
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 4px 16px rgba(0,0,0,0.25); }
+  50%       { box-shadow: 0 4px 24px rgba(255,221,19,0.50), 0 4px 16px rgba(0,0,0,0.2); }
+}
+
+/* ─── Hero entrance animations ───────────────────────────────── */
+.animate-fade-in-up   { animation: fadeInUp 0.5s ease-out both; }
+.animate-fade-in-up-d1 { animation: fadeInUp 0.5s 0.15s ease-out both; }
+.animate-fade-in-up-d2 { animation: fadeInUp 0.5s 0.30s ease-out both; }
+.animate-fade-in-up-d3 { animation: fadeInUp 0.5s 0.45s ease-out both; }
+.animate-fade-in-up-d4 { animation: fadeInUp 0.5s 0.60s ease-out both; }
+
+/* ─── Utility classes ─────────────────────────────────────── */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.4) 50%, transparent 80%);
+  animation: shimmer 2.4s ease-in-out infinite;
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 2.5s ease-in-out infinite;
+}
+
+/* Scroll-entrance (toggled by IntersectionObserver) */
+.entrance {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.entrance.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card */
+.card {
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+/* Button — primary gold */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background: #FFDD13;
+  color: #1A1A1A;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  text-decoration: none;
+}
+.btn-primary:hover  { background: #FEE255; }
+.btn-primary:active { transform: scale(0.98); }
+
+/* Button — dark (inverted) */
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  background: #1A1A1A;
+  color: #FFDD13;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  text-decoration: none;
+}
+.btn-dark:hover { background: #2E2E2E; }
+
+/* Pill badge */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  white-space: nowrap;
+}
+
+/* Progress track */
+.progress-track {
+  width: 100%;
+  height: 14px;
+  background: #F5F5F5;
+  border-radius: 100px;
+  overflow: visible;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #FFDD13, #FE6A86);
+  position: relative;
+  transition: width 1.5s ease-out;
+}
