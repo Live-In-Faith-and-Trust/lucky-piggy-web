@@ -34,7 +34,7 @@ export default function Hero() {
                 className="animate-fade-in-up-d2 text-center md:text-left"
                 style={{ fontSize: 'clamp(32px, 5vw, 52px)', fontWeight: 800, lineHeight: 1.2, color: '#1A1A1A' }}
               >
-                하루 만보,<br />1000만원<br />당첨 기회
+                매주 1,000만원<br />걷기만해도 응모
               </h1>
 
               {/* Sub-headline */}
