@@ -56,7 +56,6 @@ export default function Hero() {
                 >
                   구글 플레이에서 무료 다운로드
                 </a>
-                <p style={{ fontSize: 12, fontWeight: 500, color: '#767676' }}>무료 · Android</p>
               </div>
             </div>
 
