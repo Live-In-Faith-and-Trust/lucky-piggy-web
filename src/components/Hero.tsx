@@ -40,9 +40,9 @@ export default function Hero() {
               {/* Sub-headline */}
               <p
                 className="animate-fade-in-up-d3 text-center md:text-left mt-4"
-                style={{ fontSize: 'clamp(15px, 1.5vw, 18px)', fontWeight: 400, color: '#444444', maxWidth: 360 }}
+                style={{ fontSize: 'clamp(17px, 2vw, 22px)', fontWeight: 400, color: '#444444', maxWidth: 420, wordBreak: 'keep-all' }}
               >
-                걸을수록 응모권이 쌓여요. 매주 추첨, 진짜 현금 지급.
+                실제 로또 동일번호로 매주 토요일 추첨
               </p>
 
               {/* CTA */}
