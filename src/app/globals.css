@@ -117,7 +117,7 @@
 
 /* ─── Speech bubble responsive position ──────────────────────── */
 @media (min-width: 768px) {
-  .speech-bubble { top: 78px !important; }
+  .speech-bubble { top: 128px !important; }
 }
 
 /* ─── Hero entrance animations ───────────────────────────────── */
