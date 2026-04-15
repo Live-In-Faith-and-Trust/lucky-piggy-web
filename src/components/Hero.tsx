@@ -26,7 +26,7 @@ export default function Hero() {
             <div className="animate-fade-in-up-d1 flex justify-center md:justify-start mb-4">
               <span
                 className="pill"
-                style={{ background: '#FE6A86', color: '#FFFFFF', fontSize: 17, fontWeight: 800, padding: '7px 22px' }}
+                style={{ background: '#FF7070', color: '#FFFFFF', fontSize: 15, fontWeight: 800, padding: '7px 22px' }}
               >
                 로또 응모 앱테크
               </span>
