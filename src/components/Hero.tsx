@@ -37,7 +37,7 @@ export default function Hero() {
               className="animate-fade-in-up-d2 text-center md:text-left"
               style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
             >
-              매주 실제 로또 번호로<br />1,000만원 추첨
+              걷기만해도 받는 응모권
             </h1>
 
             {/* CTA — 데스크톱 전용 */}
