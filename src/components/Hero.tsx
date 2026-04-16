@@ -37,7 +37,7 @@ export default function Hero() {
               className="animate-fade-in-up-d2 text-center md:text-left"
               style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
             >
-              걷기만해도 받는 응모권
+              걷기만해도<br />매일 응모권이 쏟아진다
             </h1>
 
             {/* CTA — 데스크톱 전용 */}
