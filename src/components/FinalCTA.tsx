@@ -16,7 +16,7 @@ export default function FinalCTA() {
           {'지금 바로 시작하고\n1,000만원의\n주인공이 되어보세요'}
         </p>
 
-        <p style={{ fontSize: 14, color: '#767676', marginBottom: 8 }}>
+        <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 8 }}>
           사전신청 하고
         </p>
 
@@ -31,6 +31,7 @@ export default function FinalCTA() {
             maxWidth: 320,
             display: 'block',
             margin: '0 auto',
+            boxShadow: '0 4px 16px rgba(0,0,0,0.25)',
           }}
         >
           무료 복권 100장 받기
