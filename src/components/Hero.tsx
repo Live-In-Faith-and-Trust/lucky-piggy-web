@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import { PLAY_STORE_URL } from '@/lib/constants';
 
 export default function Hero() {
   return (
     <section className="relative">
-      {/* Gold gradient zone */}
       <div
         className="relative px-6 pt-6 overflow-hidden"
         style={{
@@ -19,143 +17,86 @@ export default function Hero() {
           <span style={{ fontSize: 22, fontWeight: 700, color: '#1A1A1A' }}>당첨돼지</span>
         </div>
 
-        {/* Text content + Pig */}
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="md:max-w-[50%] md:mt-[100px]">
-            {/* Eyebrow tag */}
-            <div className="animate-fade-in-up-d1 flex justify-center md:justify-start mb-4">
+        {/* Main content: vertical stack on mobile, side-by-side on desktop */}
+        <div className="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row md:items-center md:gap-8">
+          {/* Left column: Label → Headline → helper + CTA */}
+          <div className="flex-1 flex flex-col md:max-w-[320px]">
+            {/* Label pill */}
+            <div className="animate-fade-in-up-d1 flex justify-start mb-4">
               <span
                 className="pill"
-                style={{ background: '#FF7070', color: '#FFFFFF', fontSize: 15, fontWeight: 800, padding: '7px 22px' }}
+                style={{
+                  background: '#FF7070',
+                  color: '#FFFFFF',
+                  fontSize: 15,
+                  fontWeight: 800,
+                  padding: '7px 22px',
+                  borderRadius: '100px',
+                }}
               >
-                로또 응모 앱테크
+                로또 앱테크
               </span>
             </div>
 
             {/* Headline */}
             <h1
-              className="animate-fade-in-up-d2 text-center md:text-left"
-              style={{ fontSize: 'clamp(32px, 3.5vw, 48px)', fontWeight: 800, lineHeight: 1.25, color: '#1A1A1A', wordBreak: 'keep-all' }}
+              className="animate-fade-in-up-d2 text-left"
+              style={{
+                fontSize: 'clamp(32px, 3.5vw, 48px)',
+                fontWeight: 800,
+                lineHeight: 1.25,
+                color: '#1A1A1A',
+                wordBreak: 'keep-all',
+              }}
             >
               걷기만해도<br />매일 응모권이 쏟아진다
             </h1>
 
-            {/* CTA — 데스크톱 전용 */}
-            <div className="animate-fade-in-up-d4 hidden md:flex flex-col items-start gap-2 mt-8">
+            {/* Image placeholder — mobile only */}
+            <div className="animate-fade-in-up-d3 md:hidden flex justify-center mt-8 mb-6">
+              <div
+                className="rounded-3xl flex items-center justify-center"
+                style={{
+                  width: 280,
+                  height: 280,
+                  background: 'rgba(254, 226, 85, 0.6)',
+                }}
+              >
+                <span style={{ color: '#1A1A1A', opacity: 0.4, fontSize: 16 }}>이미지 영역</span>
+              </div>
+            </div>
+
+            {/* Helper text + CTA */}
+            <div className="animate-fade-in-up-d4 flex flex-col items-center md:items-start gap-2 mt-4 md:mt-8">
+              <p style={{ fontSize: 14, color: '#1A1A1A', opacity: 0.5, marginBottom: 8 }}>
+                사전신청 하고
+              </p>
               <a
-                href={PLAY_STORE_URL}
+                href="https://tally.so/r/GxBJYz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-dark animate-gold-pulse"
-                style={{ width: '100%', maxWidth: 320, boxShadow: '0 4px 16px rgba(0,0,0,0.25)', fontSize: 18 }}
+                style={{ width: '100%', fontSize: 18 }}
               >
-                지금 바로 다운로드
+                무료 복권 100장 받기
               </a>
             </div>
           </div>
 
-          {/* Pig — 데스크톱: 컨테이너 기준 absolute, 우측 절반 */}
-          <div className="hidden md:flex absolute -top-[160px] right-0 w-1/2 justify-center items-end">
+          {/* Right column: Image placeholder — desktop only */}
+          <div className="hidden md:flex flex-1 justify-center items-center">
             <div
-              className="speech-bubble"
+              className="rounded-3xl flex items-center justify-center"
               style={{
-                position: 'absolute',
-                top: 48,
-                right: 0,
-                background: '#FFFFFF',
-                borderRadius: 16,
-                padding: '10px 16px',
-                fontSize: 21,
-                fontWeight: 700,
-                color: '#1A1A1A',
-                whiteSpace: 'nowrap',
-                boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
-                zIndex: 2,
+                width: 400,
+                height: 400,
+                background: 'rgba(254, 226, 85, 0.6)',
               }}
             >
-              가입만해도 응모권 100장을 드려요!
-              <div style={{
-                position: 'absolute',
-                bottom: -10,
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: 0,
-                height: 0,
-                borderLeft: '10px solid transparent',
-                borderRight: '10px solid transparent',
-                borderTop: '10px solid #FFFFFF',
-              }} />
+              <span style={{ color: '#1A1A1A', opacity: 0.4, fontSize: 16 }}>이미지 영역</span>
             </div>
-            <Image
-              src="/images/pig/pig-money.png"
-              alt="돈 든 돼지"
-              width={496}
-              height={496}
-              className="w-[428px] lg:w-[496px] h-auto"
-              style={{ filter: 'drop-shadow(0 16px 48px rgba(0,0,0,0.18))' }}
-            />
-          </div>
-
-          {/* Pig — 모바일 전용: 일반 흐름 */}
-          <div className="md:hidden flex justify-center mt-8 mb-0 relative">
-            <div
-              className="speech-bubble"
-              style={{
-                position: 'absolute',
-                top: 48,
-                right: 0,
-                background: '#FFFFFF',
-                borderRadius: 16,
-                padding: '10px 16px',
-                fontSize: 19,
-                fontWeight: 700,
-                color: '#1A1A1A',
-                whiteSpace: 'nowrap',
-                boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
-                zIndex: 2,
-              }}
-            >
-              가입만해도 응모권 100장을 드려요!
-              <div style={{
-                position: 'absolute',
-                bottom: -10,
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: 0,
-                height: 0,
-                borderLeft: '10px solid transparent',
-                borderRight: '10px solid transparent',
-                borderTop: '10px solid #FFFFFF',
-              }} />
-            </div>
-            <Image
-              src="/images/pig/pig-money.png"
-              alt="돈 든 돼지"
-              width={384}
-              height={384}
-              className="w-[72%] h-auto"
-              style={{ filter: 'drop-shadow(0 16px 48px rgba(0,0,0,0.18))' }}
-            />
-          </div>
-
-          {/* CTA — 모바일 전용 */}
-          <div
-            className="flex md:hidden justify-center w-full"
-            style={{ marginTop: -50, position: 'relative', zIndex: 10 }}
-          >
-            <a
-              href={PLAY_STORE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-dark animate-gold-pulse"
-              style={{ width: '100%', maxWidth: 320, boxShadow: '0 4px 16px rgba(0,0,0,0.25)', fontSize: 18 }}
-            >
-              지금 바로 다운로드
-            </a>
           </div>
         </div>
-
-        <div className="h-2 md:h-10" />
       </div>
     </section>
   );
