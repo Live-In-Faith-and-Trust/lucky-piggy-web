@@ -40,20 +40,6 @@ export default function StickyHeader() {
         <Image src="/images/app-icon.png" alt="당첨돼지" width={28} height={28} className="rounded-lg" />
         <span style={{ fontSize: 16, fontWeight: 700, color: '#1A1A1A' }}>당첨돼지</span>
       </div>
-      <a
-        href="#pre-signup"
-        className="pill"
-        style={{
-          background: '#FFDD13',
-          color: '#1A1A1A',
-          fontSize: 14,
-          fontWeight: 500,
-          height: 36,
-          padding: '0 16px',
-        }}
-      >
-        사전신청
-      </a>
     </header>
   );
 }

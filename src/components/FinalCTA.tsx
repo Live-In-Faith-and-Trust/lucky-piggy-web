@@ -1,7 +1,18 @@
+import Image from 'next/image';
+
 export default function FinalCTA() {
   return (
-    <section className="entrance px-6 py-24 text-center" style={{ background: '#FFDD13' }}>
-      <div className="max-w-lg mx-auto">
+    <section className="px-6 py-24 text-center" style={{ background: '#FFDD13' }}>
+      <div className="entrance max-w-lg mx-auto">
+        <div className="flex justify-center mb-8">
+          <Image
+            src="/images/pig/cta-main.png"
+            alt="당첨돼지"
+            width={200}
+            height={207}
+            className="w-[288px] md:w-[360px] h-auto drop-shadow-xl animate-float img-hover"
+          />
+        </div>
         <p
           style={{
             fontSize: 'clamp(28px, 3vw, 44px)',
@@ -26,11 +37,8 @@ export default function FinalCTA() {
           rel="noopener noreferrer"
           className="btn-dark animate-gold-pulse"
           style={{
-            fontSize: 18,
             width: '100%',
-            maxWidth: 320,
-            display: 'block',
-            margin: '0 auto',
+            fontSize: 18,
             boxShadow: '0 4px 16px rgba(0,0,0,0.25)',
           }}
         >

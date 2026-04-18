@@ -20,7 +20,7 @@ export default function Hero() {
         {/* Main content: vertical stack on mobile, side-by-side on desktop */}
         <div className="max-w-5xl mx-auto relative z-10 flex flex-col md:flex-row md:items-center md:gap-8">
           {/* Left column: Label → Headline → helper + CTA */}
-          <div className="flex-1 flex flex-col md:max-w-[320px]">
+          <div className="flex-1 flex flex-col md:max-w-[460px]">
             {/* Label pill */}
             <div className="animate-fade-in-up-d1 flex justify-start mb-4">
               <span
@@ -52,18 +52,16 @@ export default function Hero() {
               매주 실제 로또 번호로<br />당첨금 1000만원
             </h1>
 
-            {/* Image placeholder — mobile only */}
+            {/* Image — mobile only */}
             <div className="animate-fade-in-up-d3 md:hidden flex justify-center mt-8 mb-6">
-              <div
-                className="rounded-3xl flex items-center justify-center"
-                style={{
-                  width: 280,
-                  height: 280,
-                  background: 'rgba(254, 226, 85, 0.6)',
-                }}
-              >
-                <span style={{ color: '#1A1A1A', opacity: 0.4, fontSize: 16 }}>이미지 영역</span>
-              </div>
+              <Image
+                src="/images/pig/hero-main.png"
+                alt="당첨돼지"
+                width={280}
+                height={221}
+                className="w-[280px] h-auto drop-shadow-xl animate-float"
+                priority
+              />
             </div>
 
             {/* Helper text + CTA */}
@@ -83,18 +81,16 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right column: Image placeholder — desktop only */}
+          {/* Right column: Image — desktop only */}
           <div className="hidden md:flex flex-1 justify-center items-center">
-            <div
-              className="rounded-3xl flex items-center justify-center"
-              style={{
-                width: 400,
-                height: 400,
-                background: 'rgba(254, 226, 85, 0.6)',
-              }}
-            >
-              <span style={{ color: '#1A1A1A', opacity: 0.4, fontSize: 16 }}>이미지 영역</span>
-            </div>
+            <Image
+              src="/images/pig/hero-main.png"
+              alt="당첨돼지"
+              width={500}
+              height={395}
+              className="w-full max-w-[500px] h-auto drop-shadow-2xl animate-float"
+              priority
+            />
           </div>
         </div>
       </div>
