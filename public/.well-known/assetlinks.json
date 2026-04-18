@@ -1,0 +1,32 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "kr.co.withly.android",
+      "sha256_cert_fingerprints": [
+        "66:21:2E:A1:21:90:11:19:45:8B:15:EC:60:04:A5:C2:4D:E2:75:58:9D:5B:E4:1A:3A:22:F1:41:49:86:D1:BA"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "kr.co.withly.android.staging",
+      "sha256_cert_fingerprints": [
+        "AF:AC:47:9A:4B:63:7D:31:2A:37:07:C7:4B:6B:1A:7A:05:2F:5F:C5:14:46:54:7D:00:74:B1:EC:1F:5A:30:1A"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "kr.co.withly.android.dev",
+      "sha256_cert_fingerprints": [
+        "00:33:EF:4F:72:DB:AD:59:59:3D:A5:DB:07:84:10:57:58:71:80:80:DA:55:FB:D0:27:35:A2:15:D0:92:3B:86"
+      ]
+    }
+  }
+]
