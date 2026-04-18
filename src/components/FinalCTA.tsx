@@ -1,6 +1,6 @@
 export default function FinalCTA() {
   return (
-    <section className="entrance px-6 py-24 text-center">
+    <section className="entrance px-6 py-24 text-center" style={{ background: '#FFDD13' }}>
       <div className="max-w-lg mx-auto">
         <p
           style={{
