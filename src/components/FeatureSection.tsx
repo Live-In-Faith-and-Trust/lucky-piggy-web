@@ -7,15 +7,16 @@ interface FeatureSectionProps {
   index: number;
   layout?: Layout;
   mobileImgRight?: boolean;
+  mobileImgClass?: string;
 }
 
 const BG_COLORS = ['#FAFAFA', '#FFF176', '#FFDCE0'];
 const IMAGES = [
-  '/images/pig/feature-walk.png',
-  '/images/pig/feature-draw.png',
-  '/images/pig/feature-cash.png',
+  '/images/pig/main-2.png',
+  '/images/pig/main-3.png',
+  '/images/pig/main-4.png',
 ];
-const ANIM_CLASSES = ['animate-walk', '', 'animate-coin-drop'];
+const ANIM_CLASSES = ['animate-walk', '', ''];
 
 const SECTION_MIN_HEIGHT = 520;
 
@@ -25,7 +26,7 @@ const headlineStyle: React.CSSProperties = {
   lineHeight: 1.3,
   wordBreak: 'keep-all',
   whiteSpace: 'pre-line',
-  fontSize: 'clamp(22px, 2.8vw, 40px)',
+  fontSize: 'clamp(24px, 2.8vw, 42px)',
 };
 
 export default function FeatureSection({
@@ -33,6 +34,7 @@ export default function FeatureSection({
   index,
   layout = 'default',
   mobileImgRight = false,
+  mobileImgClass = 'w-[72%]',
 }: FeatureSectionProps) {
   const bg = BG_COLORS[index % BG_COLORS.length];
   const imgSrc = IMAGES[index % IMAGES.length];
@@ -64,7 +66,7 @@ export default function FeatureSection({
               alt={headline}
               width={432}
               height={540}
-              className={`h-auto img-hover ${animClass} w-[72%] md:w-full`}
+              className={`${mobileImgClass} md:w-full h-auto img-hover ${animClass}`}
               style={{ objectFit: 'contain' }}
             />
           </div>

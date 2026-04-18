@@ -55,7 +55,7 @@ export default function Hero() {
             {/* Image — mobile only */}
             <div className="animate-fade-in-up-d3 md:hidden flex justify-center mt-8 mb-6">
               <Image
-                src="/images/pig/hero-main.png"
+                src="/images/pig/pig-hero.png"
                 alt="당첨돼지"
                 width={280}
                 height={221}
@@ -84,7 +84,7 @@ export default function Hero() {
           {/* Right column: Image — desktop only */}
           <div className="hidden md:flex flex-1 justify-center items-center">
             <Image
-              src="/images/pig/hero-main.png"
+              src="/images/pig/pig-hero.png"
               alt="당첨돼지"
               width={500}
               height={395}
