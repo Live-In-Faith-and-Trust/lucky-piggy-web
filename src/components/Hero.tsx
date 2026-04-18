@@ -49,7 +49,7 @@ export default function Hero() {
                 wordBreak: 'keep-all',
               }}
             >
-              걷기만해도<br />매일 응모권이 쏟아진다
+              매주 실제 로또 번호로<br />당첨금 1000만원
             </h1>
 
             {/* Image placeholder — mobile only */}
