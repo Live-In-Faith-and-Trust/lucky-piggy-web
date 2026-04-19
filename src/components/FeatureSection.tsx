@@ -8,15 +8,17 @@ interface FeatureSectionProps {
   layout?: Layout;
   mobileImgRight?: boolean;
   mobileImgClass?: string;
+  imgFadeBottom?: boolean;
+  fadeImgClass?: string;
 }
 
 const BG_COLORS = ['#FAFAFA', '#FFF176', '#FFDCE0'];
 const IMAGES = [
-  '/images/pig/main-2.png',
+  '/images/pig/main-2-2.png',
   '/images/pig/main-3.png',
-  '/images/pig/main-4.png',
+  '/images/pig/main-4-2.png',
 ];
-const ANIM_CLASSES = ['animate-walk', '', ''];
+const ANIM_CLASSES = ['', '', ''];
 
 const SECTION_MIN_HEIGHT = 520;
 
@@ -35,6 +37,8 @@ export default function FeatureSection({
   layout = 'default',
   mobileImgRight = false,
   mobileImgClass = 'w-[72%]',
+  imgFadeBottom = false,
+  fadeImgClass = 'w-[68%] md:w-[85%]',
 }: FeatureSectionProps) {
   const bg = BG_COLORS[index % BG_COLORS.length];
   const imgSrc = IMAGES[index % IMAGES.length];
@@ -61,14 +65,38 @@ export default function FeatureSection({
 
           {/* 이미지: 모바일 항상 아래(order-2), 데스크톱 layout에 따라 */}
           <div className={`order-2 ${imgOrder} md:flex-1 flex ${mobileImgJustify} md:justify-center`}>
-            <Image
-              src={imgSrc}
-              alt={headline}
-              width={432}
-              height={540}
-              className={`${mobileImgClass} md:w-full h-auto img-hover ${animClass}`}
-              style={{ objectFit: 'contain' }}
-            />
+            {imgFadeBottom ? (
+              <div className={`relative ${fadeImgClass}`}>
+                <Image
+                  src={imgSrc}
+                  alt={headline}
+                  width={432}
+                  height={540}
+                  className={`w-full h-auto ${animClass}`}
+                  style={{ objectFit: 'contain' }}
+                />
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '24%',
+                    background: `linear-gradient(to bottom, transparent, ${bg})`,
+                    pointerEvents: 'none',
+                  }}
+                />
+              </div>
+            ) : (
+              <Image
+                src={imgSrc}
+                alt={headline}
+                width={432}
+                height={540}
+                className={`${mobileImgClass} md:w-full h-auto ${animClass}`}
+                style={{ objectFit: 'contain' }}
+              />
+            )}
           </div>
 
         </div>

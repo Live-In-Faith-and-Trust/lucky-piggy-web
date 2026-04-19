@@ -65,8 +65,8 @@ export default function Hero() {
             </div>
 
             {/* Helper text + CTA */}
-            <div className="animate-fade-in-up-d4 flex flex-col items-center md:items-start gap-2 mt-4 md:mt-8">
-              <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 8 }}>
+            <div className="animate-fade-in-up-d4 flex flex-col items-center gap-1 mt-4 md:mt-8">
+              <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 2 }}>
                 사전신청 하고
               </p>
               <a

@@ -10,7 +10,7 @@ export default function FinalCTA() {
             alt="당첨돼지"
             width={200}
             height={207}
-            className="w-[288px] md:w-[360px] h-auto drop-shadow-xl animate-float img-hover"
+            className="w-[288px] md:w-[360px] h-auto drop-shadow-xl animate-float"
           />
         </div>
         <p
@@ -27,7 +27,7 @@ export default function FinalCTA() {
           {'지금 바로 시작하고\n1,000만원의\n주인공이 되어보세요'}
         </p>
 
-        <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 8 }}>
+        <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 2 }}>
           사전신청 하고
         </p>
 
