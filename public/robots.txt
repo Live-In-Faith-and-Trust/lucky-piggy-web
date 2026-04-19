@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /welcome
+
+Sitemap: https://www.withly.co.kr/sitemap.xml
