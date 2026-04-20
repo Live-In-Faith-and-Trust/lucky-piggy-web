@@ -7,7 +7,7 @@ import AnimationObserver from '@/components/AnimationObserver';
 
 const features = [
   { headline: '걷기만 해도\n복권을 드려요',    layout: 'reversed' as const, mobileImgRight: false, mobileImgClass: 'w-[72%]', imgFadeBottom: true, fadeImgClass: 'w-[68%] md:w-[76%]' },
-  { headline: '매주 토요일\n실제 로또 번호로 추첨', layout: 'default'  as const, mobileImgRight: false, mobileImgClass: 'w-[86%]' },
+  { headline: '매주 토요일\n실제 로또 번호로 추첨', layout: 'default'  as const, mobileImgRight: false, mobileImgClass: 'w-[86%] md:w-[90%]' },
   { headline: '당첨금은\n현금으로 출금',       layout: 'reversed' as const, mobileImgRight: false, mobileImgClass: 'w-[72%]', imgFadeBottom: true },
 ];
 

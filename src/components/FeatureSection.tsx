@@ -14,7 +14,7 @@ interface FeatureSectionProps {
 
 const BG_COLORS = ['#FAFAFA', '#FFF176', '#FFDCE0'];
 const IMAGES = [
-  '/images/pig/main-2-2.png',
+  '/images/pig/main-2-3.png',
   '/images/pig/main-3.png',
   '/images/pig/main-4-2.png',
 ];
@@ -93,7 +93,7 @@ export default function FeatureSection({
                 alt={headline}
                 width={432}
                 height={540}
-                className={`${mobileImgClass} md:w-full h-auto ${animClass}`}
+                className={`${mobileImgClass} h-auto ${animClass}`}
                 style={{ objectFit: 'contain' }}
               />
             )}
