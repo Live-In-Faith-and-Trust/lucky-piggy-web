@@ -10,11 +10,12 @@ interface FeatureSectionProps {
   mobileImgClass?: string;
   imgFadeBottom?: boolean;
   fadeImgClass?: string;
+  imgWidthPct?: number;
 }
 
 const BG_COLORS = ['#FAFAFA', '#FFF176', '#FFDCE0'];
 const IMAGES = [
-  '/images/pig/main-2-3.png',
+  '/images/pig/main-2-4.png',
   '/images/pig/main-3.png',
   '/images/pig/main-4-2.png',
 ];
@@ -39,6 +40,7 @@ export default function FeatureSection({
   mobileImgClass = 'w-[72%]',
   imgFadeBottom = false,
   fadeImgClass = 'w-[68%] md:w-[85%]',
+  imgWidthPct,
 }: FeatureSectionProps) {
   const bg = BG_COLORS[index % BG_COLORS.length];
   const imgSrc = IMAGES[index % IMAGES.length];
@@ -85,6 +87,17 @@ export default function FeatureSection({
                     background: `linear-gradient(to bottom, transparent, ${bg})`,
                     pointerEvents: 'none',
                   }}
+                />
+              </div>
+            ) : imgWidthPct ? (
+              <div style={{ width: `${imgWidthPct}%` }}>
+                <Image
+                  src={imgSrc}
+                  alt={headline}
+                  width={432}
+                  height={540}
+                  className={`w-full h-auto ${animClass}`}
+                  style={{ objectFit: 'contain' }}
                 />
               </div>
             ) : (
