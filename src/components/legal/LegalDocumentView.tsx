@@ -123,35 +123,36 @@ function ListView({ items, ordered }: { items: LegalListItem[]; ordered: boolean
 
 function TableView({ headers, rows }: { headers: string[]; rows: string[][] }) {
   return (
-    <div className="overflow-x-auto -mx-6 px-6">
-      <table className="min-w-full text-[13px] border border-[color:var(--color-n200)] border-collapse">
-        <thead>
-          <tr>
-            {headers.map((h, i) => (
-              <th
-                key={i}
-                className="border border-[color:var(--color-n200)] bg-[color:var(--color-n50)] px-3 py-2 text-left font-semibold text-[color:var(--color-n800)] whitespace-nowrap"
+    <table
+      className="w-full text-[13px] border border-[color:var(--color-n200)] border-collapse"
+      style={{ tableLayout: 'fixed' }}
+    >
+      <thead>
+        <tr>
+          {headers.map((h, i) => (
+            <th
+              key={i}
+              className="border border-[color:var(--color-n200)] bg-[color:var(--color-n50)] px-2 py-2 text-left font-semibold text-[color:var(--color-n800)] break-words"
+            >
+              {h}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((row, ri) => (
+          <tr key={ri}>
+            {row.map((cell, ci) => (
+              <td
+                key={ci}
+                className="border border-[color:var(--color-n200)] px-2 py-2 align-top text-[color:var(--color-n700)] break-words"
               >
-                {h}
-              </th>
+                {cell}
+              </td>
             ))}
           </tr>
-        </thead>
-        <tbody>
-          {rows.map((row, ri) => (
-            <tr key={ri}>
-              {row.map((cell, ci) => (
-                <td
-                  key={ci}
-                  className="border border-[color:var(--color-n200)] px-3 py-2 align-top text-[color:var(--color-n700)]"
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
   );
 }
