@@ -1,16 +1,21 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "kr.co.withly.android",
       "sha256_cert_fingerprints": [
-        "66:21:2E:A1:21:90:11:19:45:8B:15:EC:60:04:A5:C2:4D:E2:75:58:9D:5B:E4:1A:3A:22:F1:41:49:86:D1:BA"
+        "66:21:2E:A1:21:90:11:19:45:8B:15:EC:60:04:A5:C2:4D:E2:75:58:9D:5B:E4:1A:3A:22:F1:41:49:86:D1:BA",
+        "EC:A1:D7:1F:44:1F:E1:FB:3A:1A:F8:C3:0F:D2:4B:BE:53:04:D2:20:52:BB:4C:75:C3:2B:83:43:26:E1:55:29"
       ]
     }
   },
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "kr.co.withly.android.staging",
@@ -20,7 +25,9 @@
     }
   },
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "kr.co.withly.android.dev",
