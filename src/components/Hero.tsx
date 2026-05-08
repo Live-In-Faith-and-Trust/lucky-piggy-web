@@ -64,13 +64,10 @@ export default function Hero() {
               />
             </div>
 
-            {/* Helper text + CTA */}
+            {/* CTA */}
             <div className="animate-fade-in-up-d4 flex flex-col items-center gap-1 mt-4 md:mt-8">
-              <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 2 }}>
-                사전신청 하고
-              </p>
               <a
-                href="https://tally.so/r/GxBJYz"
+                href="https://play.google.com/store/apps/details?id=kr.co.withly.android&hl=ko"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-dark animate-gold-pulse"

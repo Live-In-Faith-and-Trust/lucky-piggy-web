@@ -27,12 +27,8 @@ export default function FinalCTA() {
           {'지금 바로 시작하고\n1,000만원의\n주인공이 되어보세요'}
         </p>
 
-        <p style={{ fontSize: 18, fontWeight: 700, color: '#1A1A1A', opacity: 0.6, marginBottom: 2 }}>
-          사전신청 하고
-        </p>
-
         <a
-          href="https://tally.so/r/GxBJYz"
+          href="https://play.google.com/store/apps/details?id=kr.co.withly.android&hl=ko"
           target="_blank"
           rel="noopener noreferrer"
           className="btn-dark animate-gold-pulse"
