@@ -6,6 +6,7 @@ interface FeatureSectionProps {
   headline: string;
   index: number;
   layout?: Layout;
+  highlightNumber?: string;
   mobileImgRight?: boolean;
   mobileImgClass?: string;
   imgFadeBottom?: boolean;
@@ -16,12 +17,13 @@ interface FeatureSectionProps {
 const BG_COLORS = ['#FAFAFA', '#FFF176', '#FFDCE0'];
 const IMAGES = [
   '/images/pig/main-2-4.png',
-  '/images/pig/main-3.png',
+  '/images/pig/weekly-notice.png',
   '/images/pig/main-4-2.png',
 ];
 const ANIM_CLASSES = ['', '', ''];
 
 const SECTION_MIN_HEIGHT = 520;
+const CONTENT_MAX_WIDTH = 1180;
 
 const headlineStyle: React.CSSProperties = {
   fontWeight: 800,
@@ -32,10 +34,27 @@ const headlineStyle: React.CSSProperties = {
   fontSize: 'clamp(24px, 2.8vw, 42px)',
 };
 
+function renderHeadline(headline: string, highlightNumber?: string) {
+  if (!highlightNumber) {
+    return headline;
+  }
+
+  const [before, after] = headline.split(highlightNumber);
+
+  return (
+    <>
+      {before}
+      <span style={{ color: '#FE6A86' }}>{highlightNumber}</span>
+      {after}
+    </>
+  );
+}
+
 export default function FeatureSection({
   headline,
   index,
   layout = 'default',
+  highlightNumber,
   mobileImgRight = false,
   mobileImgClass = 'w-[72%]',
   imgFadeBottom = false,
@@ -56,13 +75,19 @@ export default function FeatureSection({
       className="px-6 py-12 md:py-16"
       style={{ background: bg, minHeight: SECTION_MIN_HEIGHT }}
     >
-      <div className="max-w-5xl mx-auto">
+      <div
+        className="mx-auto"
+        style={{
+          maxWidth: CONTENT_MAX_WIDTH,
+          paddingInline: 'clamp(16px, 4vw, 64px)',
+        }}
+      >
         {/* 모바일: flex-col (텍스트→이미지) / 데스크톱: flex-row (layout에 따라) */}
         <div className="entrance flex flex-col md:flex-row md:items-center gap-8 md:gap-16">
 
           {/* 텍스트: 모바일 항상 위(order-1), 데스크톱 layout에 따라 */}
           <div className={`order-1 ${textOrder} md:flex-[1.1]`}>
-            <p style={headlineStyle}>{headline}</p>
+            <p style={headlineStyle}>{renderHeadline(headline, highlightNumber)}</p>
           </div>
 
           {/* 이미지: 모바일 항상 아래(order-2), 데스크톱 layout에 따라 */}

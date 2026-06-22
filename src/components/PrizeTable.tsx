@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 const prizes = [
   {
-    label: '🏆 1등',
-    amount: '10,000,000원',
-    sub: '매주 1명, 현금 지급',
+    label: '메인 리워드',
+    amount: '주간 리워드',
+    sub: '선정된 참여자에게 지급',
     style: 'gold' as const,
   },
   {
-    label: '🥈 2등',
-    amount: '500,000원',
-    sub: '매주 3명',
+    label: '참여 리워드',
+    amount: '추가 혜택',
+    sub: '주간 프로모션 운영',
     style: 'silver' as const,
   },
   {
-    label: '🥉 3등',
-    amount: '100,000원',
-    sub: '매주 10명',
+    label: '보너스 리워드',
+    amount: '응모권 혜택',
+    sub: '참여 활동에 따라 제공',
     style: 'bronze' as const,
   },
 ];
 
-const trustBadges = ['MBC 로또 6/45 연동', '공정위 심사 완료', '개인정보 보호'];
+const trustBadges = ['무료 활동 참여', '운영 기준 안내', '개인정보 보호'];
 
 export default function PrizeTable() {
   return (
@@ -35,17 +35,17 @@ export default function PrizeTable() {
           className="text-center"
           style={{ fontSize: 14, fontWeight: 500, color: '#FFDD13', letterSpacing: '0.08em', textTransform: 'uppercase' }}
         >
-          당첨 구조
+          리워드 안내
         </p>
 
         {/* Headline */}
         <h2 className="text-center mt-2" style={{ fontSize: 'clamp(32px, 4vw, 48px)', fontWeight: 800, color: '#FFFFFF', lineHeight: 1.2 }}>
-          매주 1,000만원<br />실제로 드려요
+          매주 리워드 프로모션에<br />참여해요
         </h2>
 
         {/* Sub */}
         <p className="text-center mt-3" style={{ fontSize: 16, fontWeight: 400, color: '#BDBDBF' }}>
-          응모권 1장 = 추첨 1회 참가. 응모권이 많을수록 당첨 확률 UP.
+          응모권으로 주간 프로모션에 참여할 수 있어요.
         </p>
 
         {/* Prize cards — responsive grid */}
@@ -67,18 +67,18 @@ export default function PrizeTable() {
                   className="pill"
                   style={{ background: 'rgba(255,255,255,0.4)', color: '#1A1A1A', fontSize: 12, fontWeight: 500, padding: '4px 12px' }}
                 >
-                  🏆 1등
+                  메인 리워드
                 </span>
                 <div style={{ fontSize: 'clamp(36px, 5vw, 52px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8, lineHeight: 1 }}>
-                  10,000,000원
+                  주간 리워드
                 </div>
                 <div style={{ fontSize: 14, fontWeight: 400, color: '#444444', marginTop: 4 }}>
-                  매주 1명, 현금 지급
+                  선정된 참여자에게 지급
                 </div>
               </div>
               <Image
                 src="/images/pig/pig-money.png"
-                alt="당첨 돼지"
+                alt="리워드 돼지"
                 width={96}
                 height={96}
                 style={{ marginBottom: -24, marginRight: -4, flexShrink: 0 }}
@@ -88,16 +88,16 @@ export default function PrizeTable() {
 
           {/* 2등 */}
           <div style={{ background: '#FFFFFF', borderRadius: 20, padding: '24px', borderLeft: '4px solid #BDBDBF' }}>
-            <div style={{ fontSize: 18, fontWeight: 600, color: '#444444' }}>🥈 2등</div>
-            <div style={{ fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8 }}>500,000원</div>
-            <div style={{ fontSize: 14, fontWeight: 400, color: '#767676', marginTop: 4 }}>매주 3명</div>
+            <div style={{ fontSize: 18, fontWeight: 600, color: '#444444' }}>참여 리워드</div>
+            <div style={{ fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8 }}>추가 혜택</div>
+            <div style={{ fontSize: 14, fontWeight: 400, color: '#767676', marginTop: 4 }}>주간 프로모션 운영</div>
           </div>
 
           {/* 3등 */}
           <div style={{ background: '#FFFFFF', borderRadius: 20, padding: '24px', borderLeft: '4px solid #FD969A' }}>
-            <div style={{ fontSize: 18, fontWeight: 600, color: '#444444' }}>🥉 3등</div>
-            <div style={{ fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8 }}>100,000원</div>
-            <div style={{ fontSize: 14, fontWeight: 400, color: '#767676', marginTop: 4 }}>매주 10명</div>
+            <div style={{ fontSize: 18, fontWeight: 600, color: '#444444' }}>보너스 리워드</div>
+            <div style={{ fontSize: 'clamp(24px, 3vw, 32px)', fontWeight: 700, color: '#1A1A1A', marginTop: 8 }}>응모권 혜택</div>
+            <div style={{ fontSize: 14, fontWeight: 400, color: '#767676', marginTop: 4 }}>참여 활동에 따라 제공</div>
           </div>
 
           {/* 보너스 */}

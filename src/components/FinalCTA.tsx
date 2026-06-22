@@ -24,7 +24,7 @@ export default function FinalCTA() {
             marginBottom: 32,
           }}
         >
-          {'지금 바로 시작하고\n1,000만원의\n주인공이 되어보세요'}
+          {'지금 바로 시작하고\n주간 리워드 프로모션에\n참여해보세요'}
         </p>
 
         <a
@@ -38,7 +38,7 @@ export default function FinalCTA() {
             boxShadow: '0 4px 16px rgba(0,0,0,0.25)',
           }}
         >
-          무료 복권 50장 받기
+          무료 응모권 받기
         </a>
       </div>
     </section>

@@ -34,7 +34,7 @@ export default function Hero() {
                   borderRadius: '100px',
                 }}
               >
-                로또 앱테크
+                무료 리워드 앱
               </span>
             </div>
 
@@ -49,16 +49,16 @@ export default function Hero() {
                 wordBreak: 'keep-all',
               }}
             >
-              매주 실제 로또 번호로<br />당첨금 1000만원
+              걷기만 해도<br />응모권이 쌓여요
             </h1>
 
             {/* Image — mobile only */}
             <div className="animate-fade-in-up-d3 md:hidden flex justify-center mt-8 mb-6">
               <Image
-                src="/images/pig/pig-hero.png"
+                src="/images/pig/hero-walk.png"
                 alt="당첨돼지"
-                width={280}
-                height={221}
+                width={581}
+                height={600}
                 className="w-[280px] h-auto drop-shadow-xl animate-float"
                 priority
               />
@@ -73,7 +73,7 @@ export default function Hero() {
                 className="btn-dark animate-gold-pulse"
                 style={{ width: '100%', fontSize: 18 }}
               >
-                무료 복권 50장 받기
+                무료 응모권 받기
               </a>
             </div>
           </div>
@@ -81,10 +81,10 @@ export default function Hero() {
           {/* Right column: Image — desktop only */}
           <div className="hidden md:flex flex-1 justify-center items-center">
             <Image
-              src="/images/pig/pig-hero.png"
+              src="/images/pig/hero-walk.png"
               alt="당첨돼지"
-              width={500}
-              height={395}
+              width={581}
+              height={600}
               className="w-full max-w-[500px] h-auto drop-shadow-2xl animate-float"
               priority
             />

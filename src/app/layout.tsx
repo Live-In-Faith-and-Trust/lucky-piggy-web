@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '당첨돼지 - 걷기만 해도 무료 복권 50장',
+        alt: '당첨돼지 - 걷기 기반 무료 리워드 앱',
       },
     ],
   },
@@ -44,7 +44,7 @@ function JsonLd() {
         '@id': 'https://www.withly.co.kr/#website',
         url: 'https://www.withly.co.kr',
         name: '당첨돼지',
-        description: '매일 걷기만 해도 응모권이 쌓여요. 매주 실제 번호로 당첨금 1,000만원을 추첨합니다.',
+        description: '걷기, 체크인, 광고 시청 등 무료 활동으로 응모권을 모으고 주간 리워드 프로모션에 참여하는 서비스입니다.',
         inLanguage: 'ko-KR',
       },
       {
@@ -53,7 +53,7 @@ function JsonLd() {
         name: '당첨돼지',
         operatingSystem: 'Android',
         applicationCategory: 'LifestyleApplication',
-        description: '걷기만 해도 응모권이 쌓이는 앱테크 앱. 매주 실제 로또 번호로 당첨금 1,000만원 추첨.',
+        description: '무료 활동으로 응모권을 모아 주간 리워드 프로모션에 참여하는 Android 리워드 앱입니다.',
         offers: {
           '@type': 'Offer',
           price: '0',

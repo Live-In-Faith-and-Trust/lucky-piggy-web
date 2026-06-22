@@ -28,9 +28,9 @@ const steps = [
   {
     number: '04',
     pig: '/images/pig/pig-default.png',
-    title: '매주 토요일 생방송 추첨',
-    body: 'MBC 로또 6/45 생방송에 연동. 투명하고 공정한 추첨.',
-    tag: '📺 MBC 로또 6/45 연동',
+    title: '주 1회 결과 발표',
+    body: '정해진 운영 기준에 따라 주간 리워드 대상자를 발표해요.',
+    tag: '주간 리워드 프로모션',
     tagStyle: { background: '#FFDCE0', color: '#FE6A86' },
   },
 ];

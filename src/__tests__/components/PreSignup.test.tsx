@@ -4,23 +4,22 @@ import PreSignup from '@/components/PreSignup';
 describe('PreSignup', () => {
   it('목표 인원을 렌더한다', () => {
     render(<PreSignup />);
-    expect(screen.getByRole('heading', { name: /5,000명/ })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /추가 응모권 10장 증정/ })).toBeInTheDocument();
   });
 
-  it('현재 참여자 수를 렌더한다', () => {
+  it('알림 안내를 렌더한다', () => {
     render(<PreSignup />);
-    expect(screen.getByText('현재 1,234명이 기다리고 있어요')).toBeInTheDocument();
+    expect(screen.getByText('앱 출시 시 카카오톡으로 알림을 보내드려요.')).toBeInTheDocument();
   });
 
-  it('CTA 버튼이 플레이스토어 링크를 포함한다', () => {
+  it('CTA 버튼을 렌더한다', () => {
     render(<PreSignup />);
-    const link = screen.getByRole('link', { name: /지금 바로 다운로드/ });
-    expect(link).toHaveAttribute('href', expect.stringContaining('play.google.com'));
+    const link = screen.getByRole('link', { name: /무료로 사전신청하기/ });
+    expect(link).toHaveAttribute('href', '#');
   });
 
-  it('프로그레스 바가 렌더된다', () => {
+  it('무료 안내를 렌더한다', () => {
     render(<PreSignup />);
-    const bar = screen.getByRole('progressbar');
-    expect(bar).toBeInTheDocument();
+    expect(screen.getByText(/스팸 없음/)).toBeInTheDocument();
   });
 });
