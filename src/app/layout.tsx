@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: '당첨돼지',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image-rewards.jpg',
         width: 1200,
         height: 630,
         alt: '당첨돼지 - 걷기 기반 무료 리워드 앱',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ['/images/og-image.jpg'],
+    images: ['/images/og-image-rewards.jpg'],
   },
 };
 
