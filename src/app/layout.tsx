@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '당첨돼지 - 걷기만 해도 무료 복권 100장',
+        alt: '당첨돼지 - 걷기만 해도 무료 복권 50장',
       },
     ],
   },

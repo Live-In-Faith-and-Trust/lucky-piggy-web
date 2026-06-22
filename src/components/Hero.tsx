@@ -73,7 +73,7 @@ export default function Hero() {
                 className="btn-dark animate-gold-pulse"
                 style={{ width: '100%', fontSize: 18 }}
               >
-                무료 복권 100장 받기
+                무료 복권 50장 받기
               </a>
             </div>
           </div>

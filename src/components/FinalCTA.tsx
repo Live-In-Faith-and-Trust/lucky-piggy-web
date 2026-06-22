@@ -38,7 +38,7 @@ export default function FinalCTA() {
             boxShadow: '0 4px 16px rgba(0,0,0,0.25)',
           }}
         >
-          무료 복권 100장 받기
+          무료 복권 50장 받기
         </a>
       </div>
     </section>
