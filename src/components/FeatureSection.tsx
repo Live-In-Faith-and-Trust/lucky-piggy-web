@@ -18,7 +18,7 @@ const BG_COLORS = ['#FAFAFA', '#FFF176', '#FFDCE0'];
 const IMAGES = [
   '/images/pig/main-2-4.png',
   '/images/pig/weekly-notice.png',
-  '/images/pig/main-4-2.png',
+  '/images/pig/reward-entry-ticket.png',
 ];
 const ANIM_CLASSES = ['', '', ''];
 
